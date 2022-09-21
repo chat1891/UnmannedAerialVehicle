@@ -1,2 +1,2 @@
 # UnmannedAerialVehicle
-This project simulates dynamics, kinematics, autopilot, path manager of a small fixed wing aircraft by following the book [Small Unmanned Aircraft: Theory and Practice] (http://uavbook.byu.edu/doku.php?id=lecture)
+This project simulates dynamics, kinematics, autopilot, path manager of a small fixed wing aircraft by following the book [Small Unmanned Aircraft: Theory and Practice](http://uavbook.byu.edu/doku.php?id=lecture)

@@ -1,0 +1,46 @@
+[System]
+Name='pitch_error'
+Type='mamdani'
+Version=2.0
+NumInputs=2
+NumOutputs=1
+NumRules=0
+AndMethod='min'
+OrMethod='max'
+ImpMethod='min'
+AggMethod='max'
+DefuzzMethod='centroid'
+
+[Input1]
+Name='velocityError'
+Range=[-1 1]
+NumMFs=7
+MF1='NB':'trimf',[-1.333 -1 -0.6666]
+MF2='NM':'trimf',[-1 -0.6666 -0.3334]
+MF3='NS':'trimf',[-0.6666 -0.3334 0]
+MF4='ZE':'trimf',[-0.3334 0 0.3334]
+MF5='PS':'trimf',[0 0.3334 0.6666]
+MF6='PM':'trimf',[0.3334 0.6666 1]
+MF7='PB':'trimf',[0.6666 1 1.334]
+
+[Input2]
+Name='altitudeError'
+Range=[-1 1]
+NumMFs=7
+MF1='mf1':'trimf',[-1.333 -1 -0.6666]
+MF2='mf2':'trimf',[-1 -0.6666 -0.3334]
+MF3='mf3':'trimf',[-0.6666 -0.3334 0]
+MF4='mf4':'trimf',[-0.3334 0 0.3334]
+MF5='mf5':'trimf',[0 0.3334 0.6666]
+MF6='mf6':'trimf',[0.3334 0.6666 1]
+MF7='mf7':'trimf',[0.6666 1 1.334]
+
+[Output1]
+Name='pitchAngle'
+Range=[0 1]
+NumMFs=3
+MF1='mf1':'trimf',[-0.416666666666667 0 0.416666666666667]
+MF2='mf2':'trimf',[0.0833333333333333 0.5 0.916666666666667]
+MF3='mf3':'trimf',[0.583333333333333 1 1.41666666666667]
+
+[Rules]

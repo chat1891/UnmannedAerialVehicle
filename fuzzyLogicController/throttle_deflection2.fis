@@ -1,0 +1,63 @@
+[System]
+Name='throttle_deflection2'
+Type='mamdani'
+Version=2.0
+NumInputs=2
+NumOutputs=1
+NumRules=20
+AndMethod='min'
+OrMethod='max'
+ImpMethod='min'
+AggMethod='max'
+DefuzzMethod='centroid'
+
+[Input1]
+Name='height'
+Range=[0 300]
+NumMFs=4
+MF1='ZE':'trimf',[-150 0 150]
+MF2='SM':'trimf',[-75 75 225]
+MF3='M':'trimf',[75 225 375]
+MF4='L':'trimf',[150 300 399.9]
+
+[Input2]
+Name='velocity'
+Range=[-50 50]
+NumMFs=5
+MF1='DB':'trimf',[-68.75 -50 -18.75]
+MF2='DL':'trimf',[-37.5 -18.75 0]
+MF3='ZE':'trimf',[-18.75 0 18.75]
+MF4='UL':'trimf',[0 18.75 37.5]
+MF5='UB':'trimf',[18.75 50 68.75]
+
+[Output1]
+Name='throttleDeflection'
+Range=[-1 1]
+NumMFs=5
+MF1='DB':'trimf',[-1.5 -1 -0.375]
+MF2='DL':'trimf',[-0.75 -0.375 0]
+MF3='ZE':'trimf',[-0.375 0 0.375]
+MF4='UL':'trimf',[0 0.375 0.75]
+MF5='UB':'trimf',[0.375 1 1.5]
+
+[Rules]
+1 5, 2 (1) : 1
+1 4, 3 (1) : 1
+1 3, 3 (1) : 1
+1 2, 3 (1) : 1
+1 1, 4 (1) : 1
+2 5, 2 (1) : 1
+2 4, 2 (1) : 1
+2 3, 3 (1) : 1
+2 2, 4 (1) : 1
+2 1, 5 (1) : 1
+3 5, 1 (1) : 1
+3 4, 1 (1) : 1
+3 3, 2 (1) : 1
+3 2, 3 (1) : 1
+3 1, 4 (1) : 1
+4 5, 1 (1) : 1
+4 4, 1 (1) : 1
+4 3, 1 (1) : 1
+4 2, 2 (1) : 1
+4 1, 3 (1) : 1

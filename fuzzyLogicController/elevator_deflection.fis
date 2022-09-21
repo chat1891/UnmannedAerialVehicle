@@ -1,0 +1,73 @@
+[System]
+Name='elevator_deflection'
+Type='mamdani'
+Version=2.0
+NumInputs=2
+NumOutputs=1
+NumRules=25
+AndMethod='min'
+OrMethod='max'
+ImpMethod='min'
+AggMethod='max'
+DefuzzMethod='centroid'
+
+[Input1]
+Name='headingError'
+Range=[-1 1]
+NumMFs=5
+MF1='NB':'trimf',[-1.5 -1 -0.5]
+MF2='NS':'trimf',[-1 -0.5 0]
+MF3='ZE':'trimf',[-0.5 0 0.5]
+MF4='PS':'trimf',[0 0.5 1]
+MF5='PB':'trimf',[0.5 1 1.5]
+
+[Input2]
+Name='lateralOffset'
+Range=[-1 1]
+NumMFs=5
+MF1='NB':'trimf',[-1.5 -1 -0.5]
+MF2='NS':'trimf',[-1 -0.5 0]
+MF3='ZE':'trimf',[-0.5 0 0.5]
+MF4='PS':'trimf',[0 0.5 1]
+MF5='PB':'trimf',[0.5 1 1.5]
+
+[Output1]
+Name='rollAngle'
+Range=[-1 1]
+NumMFs=9
+MF1='NE':'trimf',[-1.25 -1 -0.75]
+MF2='NVB':'trimf',[-1 -0.75 -0.5]
+MF3='NB':'trimf',[-0.75 -0.5 -0.25]
+MF4='NS':'trimf',[-0.5 -0.25 0]
+MF5='ZE':'trimf',[-0.25 0 0.25]
+MF6='PS':'trimf',[0 0.25 0.5]
+MF7='PB':'trimf',[0.25 0.5 0.75]
+MF8='PVB':'trimf',[0.5 0.75 1]
+MF9='PE':'trimf',[0.75 1 1.25]
+
+[Rules]
+1 1, 1 (1) : 1
+1 2, 2 (1) : 1
+1 3, 3 (1) : 1
+1 4, 4 (1) : 1
+1 5, 5 (1) : 1
+2 1, 2 (1) : 1
+2 2, 3 (1) : 1
+2 3, 4 (1) : 1
+2 4, 5 (1) : 1
+2 5, 6 (1) : 1
+3 1, 3 (1) : 1
+3 2, 4 (1) : 1
+3 3, 5 (1) : 1
+3 4, 6 (1) : 1
+3 5, 7 (1) : 1
+4 1, 4 (1) : 1
+4 2, 5 (1) : 1
+4 3, 6 (1) : 1
+4 4, 7 (1) : 1
+4 5, 8 (1) : 1
+5 1, 5 (1) : 1
+5 2, 6 (1) : 1
+5 3, 7 (1) : 1
+5 4, 8 (1) : 1
+5 5, 9 (1) : 1

@@ -1,0 +1,101 @@
+[System]
+Name='LandingVars'
+Type='mamdani'
+Version=2.0
+NumInputs=6
+NumOutputs=1
+NumRules=0
+AndMethod='min'
+OrMethod='max'
+ImpMethod='min'
+AggMethod='max'
+DefuzzMethod='centroid'
+
+[Input1]
+Name='Pitch'
+Range=[-90 90]
+NumMFs=5
+MF1='DB':'trapmf',[-130.6 -94.51 -70 -40]
+MF2='ZE':'trimf',[-5 0 5]
+MF3='DL':'trapmf',[-60 -35 -15 -3]
+MF4='UL':'trapmf',[3 15 35 60]
+MF5='UB':'trapmf',[40 70 108 128]
+
+[Input2]
+Name='Height'
+Range=[0 9000]
+NumMFs=4
+MF1='NZ':'trapmf',[-100 0 100 300]
+MF2='MH':'trapmf',[2500 3500 5500 6500]
+MF3='LH':'trapmf',[5500 7000 9000 9500]
+MF4='SH':'trapmf',[100 600 2250 3500]
+
+[Input3]
+Name='Distance'
+Range=[0 150000]
+NumMFs=4
+MF1='A':'trapmf',[-54000 -6000 1000 4000]
+MF2='MD':'trapmf',[35000 55000 80000 100000]
+MF3='LG':'trapmf',[80000 100000 156000 204000]
+MF4='SM':'trapmf',[1000 10000 30000 45000]
+
+[Input4]
+Name='Lateral'
+Range=[-10000 10000]
+NumMFs=4
+MF1='A':'trapmf',[-54000 -6000 1000 4000]
+MF2='MD':'trapmf',[35000 55000 80000 100000]
+MF3='LG':'trapmf',[80000 100000 156000 204000]
+MF4='SM':'trapmf',[1000 10000 30000 45000]
+
+[Input5]
+Name='Speed'
+Range=[0 925]
+NumMFs=5
+MF1='TX':'trapmf',[-333 -37 30 60]
+MF2='ME':'trapmf',[175 250 300 375]
+MF3='VF':'trapmf',[600 800 1000 1258]
+MF4='SL':'trapmf',[15 70 175 225]
+MF5='FA':'trapmf',[300 400 650 750]
+
+[Output1]
+Name='Pitch'
+Range=[-90 90]
+NumMFs=5
+MF1='DB':'trapmf',[-130.6 -94.51 -70 -40]
+MF2='ZE':'trimf',[-5 0 5]
+MF3='DL':'trapmf',[-60 -35 -15 -3]
+MF4='UL':'trapmf',[3 15 35 60]
+MF5='UB':'trapmf',[40 70 108 128]
+
+[Output2]
+Name='Speed'
+Range=[0 925]
+NumMFs=5
+MF1='TX':'trapmf',[-333 -37 30 60]
+MF2='ME':'trapmf',[175 250 300 375]
+MF3='VF':'trapmf',[600 800 1000 1258]
+MF4='SL':'trapmf',[15 70 175 225]
+MF5='FA':'trapmf',[300 400 650 750]
+
+[Output3]
+Name='Yaw'
+Range=[-60 60]
+NumMFs=5
+MF1='LB':'trapmf',[-103.2 -64.8 -40 -10]
+MF2='ST':'trimf',[-5 0 5]
+MF3='mf3':'trapmf',[10 40 80 103.2]
+MF4='LL':'trapmf',[-25 -13 -6.5 -2]
+MF5='RL':'trapmf',[2 6.5 13 25]
+
+[Output4]
+Name='Roll'
+Range=[-90 90]
+NumMFs=5
+MF1='LVD':'trapmf',[-130.6 -94.51 -70 -40]
+MF2='SD':'trimf',[-5 0 5]
+MF3='DL':'trapmf',[-60 -35 -15 -3]
+MF4='RD':'trapmf',[3 15 35 60]
+MF5='RVD':'trapmf',[40 70 108 128]
+
+[Rules]

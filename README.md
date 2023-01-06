@@ -1,7 +1,7 @@
 # Unmanned Aerial Vehicle
 This project is done in 2019 to simulate dynamics, kinematics, autopilot, path manager of a small fixed wing aircraft by following the book [Small Unmanned Aircraft: Theory and Practice](https://press.princeton.edu/books/hardcover/9780691149219/small-unmanned-aircraft)
 
-Poject template files are provided in this [github account](https://github.com/randybeard/uavbook).
+Project template files are provided in this [github account](https://github.com/randybeard/uavbook).
 
 ### Installation
 - Matlab, Simulink
